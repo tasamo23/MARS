@@ -7,12 +7,6 @@ export const SITE: Site = {
 	AUTHOR: "Masato Arnold",
 };
 
-// Work Page
-export const WORK: Page = {
-	TITLE: "Work",
-	DESCRIPTION: "Places I have worked.",
-};
-
 // Blog Page
 export const BLOG: Page = {
 	TITLE: "Blog",
@@ -36,10 +30,6 @@ export const LINKS: Links = [
 	{
 		TEXT: "Home",
 		HREF: "/",
-	},
-	{
-		TEXT: "Work",
-		HREF: "/work",
 	},
 	{
 		TEXT: "Blog",
