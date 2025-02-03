@@ -31,10 +31,6 @@ html {
 	font-family: "Nunito Variable", sans-serif;
 }
 
-p {
-	font-family: "Crimson Pro Variable", serif;
-}
-
 html.dark {
 	color-scheme: dark;
 	background-color: black;

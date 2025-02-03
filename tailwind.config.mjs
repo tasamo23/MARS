@@ -8,7 +8,6 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ["Nunito Variable", ...defaultTheme.fontFamily.sans],
-				serif: ["Crimson Pro Variable", ...defaultTheme.fontFamily.serif],
 			},
 			typography: {
 				DEFAULT: {
