@@ -24,19 +24,24 @@ const stack = [
 		href: "https://astro.build",
 	},
 	{
-		text: "Javascript",
-		icon: "javascript",
-		href: "https://www.javascript.com",
-	},
-	{
 		text: "Typescript",
 		icon: "typescript",
 		href: "https://www.typescriptlang.org",
 	},
 	{
+		text: "SolidJS",
+		icon: "solidjs",
+		href: "https://www.solidjs.com/",
+	},
+	{
 		text: "Tailwind",
 		icon: "tailwind",
 		href: "https://tailwindcss.com",
+	},
+	{
+		text: "Devicon",
+		icon: "devicon",
+		href: "https://devicon.dev",
 	},
 ];
 ---
@@ -201,20 +206,6 @@ const stack = [
 								<StackCard text={item.text} icon={item.icon} href={item.href} />
 							))
 						}
-					</div>
-					<div>
-						Performing reactivity and statefulness, special guest
-						<a
-							href="https://www.solidjs.com/"
-							target="_blank"
-							class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
-						>
-							<span
-								class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
-							>
-								SolidJS
-							</span>
-						</a>
 					</div>
 				</div>
 			</section>
