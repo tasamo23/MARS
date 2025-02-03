@@ -26,10 +26,10 @@ const next = items[(index + 1) % items.length];
 	<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 		<a
 			href={`/${prev.collection}/${prev.slug.replace(/^[0-9-]+/, '')}`}
-			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 blend"
+			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 blend"
 		>
 			<div
-				class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend"
+				class="order-2 w-full h-full group-hover:text-black dark:group-hover:text-white blend"
 			>
 				<div class="flex flex-wrap gap-2">
 					<div class="text-sm uppercase">Prev</div>
@@ -47,7 +47,7 @@ const next = items[(index + 1) % items.length];
 				stroke-width="2.5"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="order-1 stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-180"
+				class="order-1 stroke-current group-hover:stroke-black dark:group-hover:stroke-white rotate-180"
 			>
 				<line
 					x1="5"
@@ -64,10 +64,10 @@ const next = items[(index + 1) % items.length];
 		</a>
 		<a
 			href={`/${next.collection}/${next.slug.replace(/^[0-9-]+/, '')}`}
-			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
 		>
 			<div
-				class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend"
+				class="w-full h-full text-right group-hover:text-black dark:group-hover:text-white blend"
 			>
 				<div class="text-sm uppercase">Next</div>
 				<div class="font-semibold mt-3 text-black dark:text-white">
@@ -83,7 +83,7 @@ const next = items[(index + 1) % items.length];
 				stroke-width="2.5"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+				class="stroke-current group-hover:stroke-black dark:group-hover:stroke-white"
 			>
 				<line
 					x1="5"

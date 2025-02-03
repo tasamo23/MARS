@@ -10,9 +10,9 @@ export default function ArrowCard({ entry, pill }: Props) {
 	return (
 		<a
 			href={`/${entry.collection}/${entry.slug.replace(/^[0-9-]+/, '')}`}
-			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
 		>
-			<div class="w-full group-hover:text-black group-hover:dark:text-white blend">
+			<div class="w-full group-hover:text-black dark:group-hover:text-white blend">
 				<div class="flex flex-wrap items-center gap-2">
 					{pill && (
 						<div class="text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25">
@@ -31,7 +31,7 @@ export default function ArrowCard({ entry, pill }: Props) {
 						(
 							tag: string, // this line has an error; Parameter 'tag' implicitly has an 'any' type.ts(7006)
 						) => (
-							<li class="text-xs uppercase py-0.5 px-1 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75">
+							<li class="text-xs uppercase py-0.5 px-1 rounded-sm bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75">
 								{tag}
 							</li>
 						),
@@ -47,7 +47,7 @@ export default function ArrowCard({ entry, pill }: Props) {
 				stroke-width="2.5"
 				stroke-linecap="round"
 				stroke-linejoin="round"
-				class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+				class="stroke-current group-hover:stroke-black dark:group-hover:stroke-white"
 			>
 				<line
 					x1="5"

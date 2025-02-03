@@ -49,11 +49,11 @@ export default function Projects({ data, tags }: Props) {
 									<button
 										onClick={() => toggleTag(tag)}
 										class={cn(
-											"w-full px-2 py-1 rounded",
-											"whitespace-nowrap overflow-hidden overflow-ellipsis",
+											"w-full px-2 py-1 rounded-sm",
+											"whitespace-nowrap overflow-hidden text-ellipsis",
 											"flex gap-2 items-center",
 											"bg-black/5 dark:bg-white/10",
-											"hover:bg-black/10 hover:dark:bg-white/15",
+											"hover:bg-black/10 dark:hover:bg-white/15",
 											"transition-colors duration-300 ease-in-out",
 											filter().has(tag) && "text-black dark:text-white",
 										)}

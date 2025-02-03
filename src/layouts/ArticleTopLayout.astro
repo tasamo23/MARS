@@ -17,7 +17,7 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
 <div>
 	<a
 		href={`/${collection}`}
-		class="group w-fit p-1.5 gap-1.5 text-sm flex items-center border rounded hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+		class="group w-fit p-1.5 gap-1.5 text-sm flex items-center border rounded-sm hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
 			stroke-width="2.5"
 			stroke-linecap="round"
 			stroke-linejoin="round"
-			class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+			class="stroke-current group-hover:stroke-black dark:group-hover:stroke-white"
 		>
 			<line
 				x1="19"
@@ -43,7 +43,7 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
 			></polyline>
 		</svg>
 		<div
-			class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out"
+			class="w-full group-hover:text-black dark:group-hover:text-white transition-colors duration-300 ease-in-out"
 		>
 			Back to {collection}
 		</div>
@@ -75,15 +75,15 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
 					<a
 						href={demoUrl}
 						target="_blank"
-						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
+						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded-sm text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/15 blend"
 					>
 						<svg class="size-4">
 							<use
 								href="/ui.svg#globe"
-								class="fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+								class="fill-current group-hover:fill-black dark:group-hover:fill-white blend"
 							/>
 						</svg>
-						<span class="text-current group-hover:text-black group-hover:dark:text-white blend">
+						<span class="text-current group-hover:text-black dark:group-hover:text-white blend">
 							See Demo
 						</span>
 					</a>
@@ -92,15 +92,15 @@ const repoUrl = collection === "projects" ? data.repoUrl : null;
 					<a
 						href={repoUrl}
 						target="_blank"
-						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 hover:dark:bg-white/15 blend"
+						class="group flex gap-2 items-center px-3 py-1.5 truncate rounded-sm text-xs md:text-sm lg:text-base border border-black/25 dark:border-white/25 hover:bg-black/5 dark:hover:bg-white/15 blend"
 					>
 						<svg class="size-4">
 							<use
 								href="/ui.svg#link"
-								class="fill-current group-hover:fill-black group-hover:dark:fill-white blend"
+								class="fill-current group-hover:fill-black dark:group-hover:fill-white blend"
 							/>
 						</svg>
-						<span class="text-current group-hover:text-black group-hover:dark:text-white blend">
+						<span class="text-current group-hover:text-black dark:group-hover:text-white blend">
 							See Repository
 						</span>
 					</a>
