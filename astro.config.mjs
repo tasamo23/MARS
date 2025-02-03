@@ -6,15 +6,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://masatoarnold.dev",
+	site: "https://masatoarnold.dev",
 
-  integrations: [
-      mdx(),
-      sitemap(),
-      solidJs(),
-	],
+	integrations: [mdx(), sitemap(), solidJs()],
 
-  vite: {
-    plugins: [tailwindcss({ applyBaseStyles: false })],
-  },
+	vite: {
+		plugins: [tailwindcss({ applyBaseStyles: false })],
+	},
 });

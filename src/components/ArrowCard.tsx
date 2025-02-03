@@ -9,7 +9,7 @@ type Props = {
 export default function ArrowCard({ entry, pill }: Props) {
 	return (
 		<a
-			href={`/${entry.collection}/${entry.slug.replace(/^[0-9-]+/, '')}`}
+			href={`/${entry.collection}/${entry.slug.replace(/^[0-9-]+/, "")}`}
 			class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
 		>
 			<div class="w-full group-hover:text-black dark:group-hover:text-white blend">
