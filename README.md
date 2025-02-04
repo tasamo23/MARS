@@ -1,6 +1,6 @@
 # MARS
 
-**M**asato **A**rnold's **R**amble **S**ite
+**M**asato **A**rnold's **R**udimentary **S**ite
 
 ## Acknowledgement
 
