@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol id="brand" viewBox="0 0 128 128" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
-      <g stroke="black">
+      <g stroke="currentColor">
         <path fill="none" d="M24 108V28l40 80 40-80v80" />
         <path fill="currentColor" d="M48 36h32l8-16H40zm16 32-8-16h16z" />
       </g>

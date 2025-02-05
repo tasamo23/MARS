@@ -7,9 +7,6 @@ settings:
 importers:
   .:
     dependencies:
-      "@fontsource-variable/crimson-pro":
-        specifier: ^5.1.1
-        version: 5.1.1
       "@fontsource-variable/nunito":
         specifier: ^5.1.1
         version: 5.1.1
@@ -579,12 +576,6 @@ packages:
     engines: { node: ">=18" }
     cpu: [x64]
     os: [win32]
-
-  "@fontsource-variable/crimson-pro@5.1.1":
-    resolution:
-      {
-        integrity: sha512-q610vF4GVQo33g/DwbCAoxPX1KfJLBb+6iEMQ1VEPOv2PCXCpayuO0+fToo2ABoFoThg9HqPyENWSp9Z0aJ95Q==,
-      }
 
   "@fontsource-variable/nunito@5.1.1":
     resolution:
@@ -4543,8 +4534,6 @@ snapshots:
 
   "@esbuild/win32-x64@0.24.2":
     optional: true
-
-  "@fontsource-variable/crimson-pro@5.1.1": {}
 
   "@fontsource-variable/nunito@5.1.1": {}
 

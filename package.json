@@ -33,7 +33,6 @@
 		"typescript": "^5.7.3"
 	},
 	"dependencies": {
-		"@fontsource-variable/crimson-pro": "^5.1.1",
 		"@fontsource-variable/nunito": "^5.1.1",
 		"@tailwindcss/vite": "^4.0.3",
 		"devicon": "^2.16.0",

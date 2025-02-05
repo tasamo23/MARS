@@ -4,8 +4,6 @@ import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard";
 import StackCard from "@components/StackCard.astro";
 import { SITE, SOCIALS } from "@consts";
-import TwinklingStars from "@components/TwinklingStars.astro";
-import MeteorShower from "@components/MeteorShower.astro";
 
 const posts = (await getCollection("blog"))
 	.filter((post) => !post.data.draft)
@@ -24,48 +22,29 @@ const stack = [
 		href: "https://astro.build",
 	},
 	{
-		text: "Javascript",
-		icon: "javascript",
-		href: "https://www.javascript.com",
-	},
-	{
 		text: "Typescript",
 		icon: "typescript",
 		href: "https://www.typescriptlang.org",
+	},
+	{
+		text: "SolidJS",
+		icon: "solidjs",
+		href: "https://www.solidjs.com/",
 	},
 	{
 		text: "Tailwind",
 		icon: "tailwind",
 		href: "https://tailwindcss.com",
 	},
+	{
+		text: "Devicon",
+		icon: "devicon",
+		href: "https://devicon.dev",
+	},
 ];
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
-	<!-- Light Mode: Particles -->
-	<div class="absolute inset-0 block dark:hidden">
-		<div id="particles1" class="fixed inset-0"></div>
-		<div id="particles2" class="fixed inset-0"></div>
-		<div id="particles3" class="fixed inset-0"></div>
-	</div>
-
-	<!-- Dark Theme: Stars -->
-	<div class="absolute inset-0 bg-black hidden dark:block">
-		<div id="stars1" class="fixed inset-0"></div>
-		<div id="stars2" class="fixed inset-0"></div>
-		<div id="stars3" class="fixed inset-0"></div>
-	</div>
-
-	<!-- Dark Theme: Twinkling Stars / Metors -->
-	<div id="galaxy" class="fixed inset-0">
-		<div class="hidden dark:block">
-			<TwinklingStars />
-			<MeteorShower />
-		</div>
-	</div>
-
-	<script is:inline src="/js/bg.js"></script>
-
 	<!-- HERO -->
 	<section class="relative h-screen w-full">
 		<div
@@ -74,17 +53,12 @@ const stack = [
 		>
 			<div
 				id="crescent"
-				class="absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-linear-to-b from-black/25 dark:from-white/75 from-0% to-transparent to-5%"
+				class="absolute top-0 left-1/2 -translate-x-1/2 w-[250vw] min-h-[100vh] aspect-square rounded-full p-[1px] bg-radial-[at_50%_0%] from-indigo-900 dark:from-orange-100 to-transparent from-0% to-28%"
 			>
 				<div
 					id="planet"
-					class="w-full h-full bg-white dark:bg-black rounded-full p-[1px] overflow-hidden flex justify-center"
+					class="w-full h-full mt-1 bg-white dark:bg-black rounded-full overflow-hidden flex justify-center"
 				>
-					<div
-						id="blur-sm"
-						class="w-full h-20 rounded-full bg-neutral-900/25 dark:bg-white/25 blur-3xl"
-					>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -98,13 +72,13 @@ const stack = [
 					>
 						Hello, I am ...
 					</p>
-					<p
+					<h1
 						class="animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white"
 					>
 						Masato Arnold
-					</p>
+					</h1>
 					<p class="animated text-sm md:text-base lg:text-lg opacity-75">
-						Currently designing products for humans (and their robot slaves).
+						Welcome to my personal website.
 					</p>
 					<div
 						id="ctaButtons"
@@ -133,31 +107,22 @@ const stack = [
 			<!-- About Section -->
 			<section class="animate">
 				<article>
+					<h3>About me</h3>
 					<p>
-						I am a <b><i>software engineer</i></b>, <b><i>ui/ux designer</i></b
-						>, <b><i>product planner</i></b>, <b><i>mentor</i></b>, <b
-							><i>student</i></b
-						>, <b><i>minimalist</i></b>, <b><i>eternal optimist</i></b>, <b
-							><i>crypto enthusiast</i></b
-						> and <b><i>sarcasm connoisseur</i></b>.
+						I am a high school student in Tokyo with both a German and Japanese
+						background. I have a high interest in science and tech, especially
+						regarding Quantum Science, Cyber Security and Machine Learning.
 					</p>
 					<p>
-						I love to both build and break things. I am motivated by challenging
-						projects with self-guided research and dynamic problem solving. My
-						true passion is crafting creative front end designs with unique
-						takes on color, typography and motion.
+						I'm a computer science enthusiast. Currently, I am obsessed with
+						Nix, Rust and Astro. Soon, Dioxus will join the stack...
 					</p>
-					<p>During my career</p>
 					<p>
-						I have built products ranging from marketing and ecommerce websites
-						to complex enterprise apps with focus on delivering fast, elegant
-						code along with delightful user interfaces.
+						I read a lot, mainly thrillers, sci-fi and also nonfiction books. I
+						write a bit, and this website is my take on making it a regular
+						habit.
 					</p>
-					<p>Now</p>
-					<p>
-						I currently work as a software engineer at StreamlineFS, where I do
-						product planning, design and development.
-					</p>
+					<p>See you around</p>
 				</article>
 			</section>
 
@@ -203,18 +168,19 @@ const stack = [
 						}
 					</div>
 					<div>
-						Performing reactivity and statefulness, special guest
+						Astro theme based on
 						<a
-							href="https://www.solidjs.com/"
+							href="https://github.com/markhorn-dev/astro-sphere"
 							target="_blank"
 							class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend"
 						>
 							<span
 								class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend"
 							>
-								SolidJS
+								Astro-sphere
 							</span>
-						</a>
+						</a>. Mark Horn seems to be a terrific UI/UX Designer, and I'm
+						grateful to be able to make use of his work. Check it out!
 					</div>
 				</div>
 			</section>
