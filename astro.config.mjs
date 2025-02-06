@@ -11,6 +11,6 @@ export default defineConfig({
 	integrations: [mdx(), sitemap(), solidJs()],
 
 	vite: {
-		plugins: [tailwindcss({ applyBaseStyles: false })],
+		plugins: [tailwindcss()],
 	},
 });

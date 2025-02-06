@@ -8,6 +8,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = "/open-graph.jpg" } = Astro.props;
+import nunitoWoff2 from "@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2";
 ---
 
 <!-- Global Metadata -->
@@ -49,21 +50,41 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props;
 	href={`${Astro.site}rss.xml`}
 />
 
+<!-- Fonts -->
+<link
+	rel="preload"
+	as="font"
+	href={nunitoWoff2}
+	type="font/woff2"
+	crossorigin="anonymous"
+/>
+
 <!-- Global Scripts -->
-<script is:inline src="/js/theme.js"></script>
-<script is:inline src="/js/scroll.js"></script>
-<script is:inline src="/js/animate.js"></script>
-<script defer is:inline src="/js/copy.js"></script>
+<script is:inline>
+	function preloadTheme() {
+		document.documentElement.classList.toggle(
+			"dark",
+			localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches),
+		);
+	}
 
-<!-- <ViewTransitions  /> -->
+	document.addEventListener("astro:after-swap", preloadTheme);
 
-<script>
-	import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
-	document.addEventListener("astro:before-swap", (e) =>
-		[
-			...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
-				'link[as="font"]',
-			),
-		].forEach((link) => link.remove()),
-	);
+	preloadTheme();
+</script>
+<script async is:inline>
+	function animate() {
+		const animateElements = document.querySelectorAll(".animate");
+
+		animateElements.forEach((element, index) => {
+			setTimeout(() => {
+				element.classList.add("show");
+			}, index * 150);
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", animate);
+	document.addEventListener("astro:after-swap", animate);
 </script>

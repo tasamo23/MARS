@@ -146,6 +146,30 @@ import Container from "@components/Container.astro";
 </style>
 
 <script is:inline>
+	function toggleTheme() {
+		localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+		// https://reemus.dev/article/disable-css-transition-color-scheme-change
+		const style = document.createElement("style");
+		const css = document.createTextNode(`* {
+			-webkit-transition: none !important;
+			-moz-transition: none !important;
+			-o-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		}`);
+		style.appendChild(css);
+
+		document.head.appendChild(style);
+		document.documentElement.classList.toggle(
+			"dark",
+			localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches),
+		);
+		window.getComputedStyle(style).opacity;
+		document.head.removeChild(style);
+	}
+
 	function toggleDrawer() {
 		const drawer = document.getElementById("drawer");
 		const drawerButton = document.getElementById("header-drawer-button");
@@ -153,11 +177,30 @@ import Container from "@components/Container.astro";
 		drawerButton?.classList.toggle("open");
 	}
 
+	function initializeThemeButtons() {
+		const headerThemeButton = document.getElementById("header-theme-button");
+		const drawerThemeButton = document.getElementById("drawer-theme-button");
+		headerThemeButton?.addEventListener("click", toggleTheme);
+		drawerThemeButton?.addEventListener("click", toggleTheme);
+	}
+
 	function initializeDrawerButton() {
 		const drawerButton = document.getElementById("header-drawer-button");
 		drawerButton?.addEventListener("click", toggleDrawer);
 	}
 
+	function onScroll() {
+		const header = document.getElementById("header");
+		if (window.scrollY > 0) {
+			header.classList.add("scrolled");
+		} else {
+			header.classList.remove("scrolled");
+		}
+	}
+
 	document.addEventListener("astro:after-swap", initializeDrawerButton);
 	initializeDrawerButton();
+	document.addEventListener("astro:after-swap", initializeThemeButtons);
+	initializeThemeButtons();
+	document.addEventListener("scroll", onScroll);
 </script>
