@@ -1,13 +1,14 @@
 ---
-title: "Hello World"
-summary: "Let me introduce myself."
-date: "Feb 5 2024"
+title: Hello World
+summary: Let me introduce myself.
+date: Feb 5 2024
 draft: false
 tags:
-  - "Personal"
+  - Personal
+lastmod: 2025-02-18T21:26:23.470Z
 ---
 
-![An AI-generated image depicting a growing seedling](./e855ad01-4aa7-44b1-b4d6-7e57dc58e7e2.jpg)
+![An AI-generated image depicting a growing seedling](../assets/e855ad01-4aa7-44b1-b4d6-7e57dc58e7e2.jpg)
 
 Hi there. First post. It's thrilling to think that people could read this. It's a weird feeling, but I think it'll go away at some point. Or maybe it won't.
 
